@@ -6,8 +6,8 @@ import Games from './components/Games';
 import GameContextProvider from "./Contextprovider";
 import IO from 'socket.io-client';
 
+// // 
 const socket = IO.connect('http://localhost:4000');
-
 function App() {
   return(
     <>
@@ -16,7 +16,7 @@ function App() {
     <Route
     path="/"
     index
-    element={<Home/>}
+    element={<Home socket={socket}/>}
   />  
    <Route
     path="/dashboard"
