@@ -7,11 +7,15 @@ export function useGameContext() {
   }
 
 function GameContextprovider({ children }) {
-  const [user, setUser]=useState({userName:'',email:'',password:''});
+  const [user, setUser]=useState({nickName:'',email:'',password:''});
+  const [userInfo, setUserInfo]=useState({nickName:'',email:'',password:'',repassword:''});
 
    
 
   const valueToShere={
+    setUserInfo,
+    userInfo
+
    
   }
 
