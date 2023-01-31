@@ -2,7 +2,7 @@
 import WheelComponent from "react-wheel-of-prizes";
 import React, {useState, useEffect} from "react";
 
-export default function Games() {
+export default function Games({ socket }) {
     const [arrowOn, setArrowOn] = useState([""]);
     const [flash, setFlash] = useState(false);
 

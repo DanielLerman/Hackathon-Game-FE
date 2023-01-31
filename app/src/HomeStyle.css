@@ -1,0 +1,58 @@
+.background{
+    height: 100vh;
+	width: 100vw;
+   background-color: black;
+
+}
+.welcome-title{
+    font-size: 6rem;
+    font-family: 'Shadows Into Light', cursive;
+    color: #ff4da6;
+    text-shadow: 0 0 20px #eeeeee, 0 0 5px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6,
+    0 0 40px #ff4da6, 0 0 20px #ff4da6, 0 0 80px #ff4da6; 
+}
+.start-btn{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 2rem;
+    padding: 0.2rem 2.8rem;
+    color: #eeeeee;
+   background-color: #4deaff;
+   letter-spacing: 0.1rem;
+   box-shadow: 0 0 20px #eeeeee, 0 0 5px #4deaff, 0 0 10px #4deaff, 0 0 10px #4deaff,
+   0 0 40px #4deaff, 0 0 20px #4deaff, 0 0 80px #4deaff; 
+
+}
+.start-btn:hover{
+    cursor: pointer;
+}
+.modal-header, .modal-body, .modal-footer{
+    color: #eeeeee; 
+    background-color: black;
+}
+.modal-header{
+ border-top: solid yellow;
+box-shadow: 0px -4px 3px rgba(193, 193, 34, 0.75);
+     text-shadow: 0 0 20px #eeeeee, 0 0 5px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6,
+    0 0 40px #ff4da6, 0 0 20px #ff4da6, 0 0 80px #ff4da6; 
+}
+.modal-footer{
+     border-bottom: solid yellow;
+    box-shadow: 0px 15px 10px -10px rgba(193, 193, 34, 0.75);  
+}
+.signUp-btn:hover{ 
+cursor: pointer;
+ box-shadow: 0 0 20px #eeeeee, 0 0 5px #4deaff, 0 0 10px #4deaff, 0 0 10px #4deaff,
+   0 0 40px #4deaff, 0 0 20px #4deaff, 0 0 80px #4deaff; 
+
+}
+.logIn-btn{
+    width: fit-content;
+    padding: 0.2rem 2rem;
+     background-color: #ff4da6;
+     box-shadow:  0 0 20px #eeeeee, 0 0 5px #ff4da6, 0 0 10px #ff4da6, 0 0 10px #ff4da6,
+    0 0 25px #ff4da6, 0 0 10px #ff4da6, 0 0 80px #ff4da6;  
+    
+}
+.logIn-btn:hover{
+    cursor: pointer;
+}
