@@ -85,6 +85,7 @@ export default function Games() {
        }
        return (alert("Did they actually do this?"))
       }, [arrowOn]);
+      
   return (
     <div>
       <div>
