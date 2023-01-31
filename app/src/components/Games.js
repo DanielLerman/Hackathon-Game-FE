@@ -6,7 +6,11 @@ export default function Games({ socket }) {
     const [arrowOn, setArrowOn] = useState([""]);
     const [flash, setFlash] = useState(false);
 
+    const [users, setUsers] = useState([]);
 
+    useEffect(() => {
+      socket.on('newUserResponse', (data) => setUsers(data));
+    }, [socket, users]);
 
   const segments = [
     "Shots o' Clock",
@@ -103,7 +107,9 @@ export default function Games({ socket }) {
           fontFamily="Helvetica"
         />
       </div>
-      <h2>Start editing to see some magic happen!</h2>
+      <h2>  {users.map((user) => (
+            <p key={user.socketID}>{user.userName}</p>
+          ))}</h2>
     </div>
   );
 }

@@ -5,10 +5,12 @@ import Dashboard from './components/Dashboard';
 import Games from './components/Games';
 import GameContextProvider from "./Contextprovider";
 import IO from 'socket.io-client';
-
+import Username from './components/ChooseName'
 // // 
 const socket = IO.connect('http://localhost:4000');
 function App() {
+
+
   return(
     <>
     <GameContextProvider>
@@ -18,6 +20,8 @@ function App() {
     index
     element={<Home socket={socket}/>}
   />  
+ <Route path="/user" element={<Username socket={socket} />}></Route>
+
    <Route
     path="/dashboard"
     index
