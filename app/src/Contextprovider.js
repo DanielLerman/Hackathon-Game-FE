@@ -1,4 +1,4 @@
-import { createContext, useContext} from "react";
+import { createContext, useContext,useState} from "react";
 
 export const GameContext = createContext();
 
@@ -7,13 +7,17 @@ export function useGameContext() {
   }
 
 function GameContextprovider({ children }) {
-    const handleClickTest = () => {
-    alert("HELLOOOO!!")    
-    };
+  const [user, setUser]=useState({userName:'',email:'',password:''});
+
+   
+
+  const valueToShere={
+   
+  }
 
 
   return (
-    <GameContext.Provider value={{handleClickTest}}>
+    <GameContext.Provider value={valueToShere}>
     {children}
   </GameContext.Provider>
   )
