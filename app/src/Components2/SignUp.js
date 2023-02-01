@@ -12,7 +12,7 @@ const SignUp = () => {
         setUserInfo({ ...userInfo, [e.target.id]: e.target.value });
     };
 
-    const addUser = async () => {
+const addUser = async () => {
         try {
             const res = await axios.post(
                 "http://localhost:8080/users/signup",
