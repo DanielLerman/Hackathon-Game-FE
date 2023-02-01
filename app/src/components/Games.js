@@ -1,4 +1,3 @@
-// import "./styles.css";
 import WheelComponent from "../Components2/WheelComponent";
 import React, {useState, useEffect} from "react";
 import '../WheelCss.css'
@@ -9,9 +8,10 @@ export default function Games({ socket }) {
     console.log(flash)
     const [users, setUsers] = useState([]);
 
-    useEffect(() => {
-      socket.on('newUserResponse', (data) => setUsers(data));
-    }, [socket, users]);
+
+  // useEffect(() => {
+  //   socket.on('newUserResponse', (data) => setUsers(data));
+  // }, [socket, users]);
 
 
   const segments = [
@@ -27,9 +27,8 @@ export default function Games({ socket }) {
     "9",
     "10",
     "11",
-    "12"
+    "12",
   ];
-  
 
 
   const segColors = [
@@ -124,3 +123,4 @@ export default function Games({ socket }) {
         </div>
       );
     }
+

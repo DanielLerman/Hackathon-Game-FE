@@ -8,6 +8,7 @@ import IO from 'socket.io-client';
 import Username from "./components/ChooseName";
 
 const socket = IO.connect('http://localhost:8080');
+
 function App() {
   return (
     <>
@@ -19,6 +20,7 @@ function App() {
             element={
               <Home
               socket={socket}
+
               />
             }
           />
@@ -27,6 +29,7 @@ function App() {
             element={
               <Username
                socket={socket}
+
               />
             }
           ></Route>
@@ -38,6 +41,7 @@ function App() {
             element={
               <Games
               socket={socket}
+
               />
             }
           />
