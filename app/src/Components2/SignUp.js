@@ -1,34 +1,66 @@
-import React, { useContext, useState } from "react";
-import { GameContext } from '../Contextprovider';
+import React, { useState } from "react";
+import AuthButton from "../components/AuthButton";
 import axios from "axios";
 
 const SignUp = () => {
-    const { userInfo, setUserInfo} = useContext(GameContext);
-    const handleChange=(e)=>{
-        e.preventDefault() 
-        setUserInfo({ ...userInfo, [e.target.id]: e.target.value })
-        console.log(userInfo)
-      }
-    // const addUser =async(e)=>{
-    //   e.preventDefault() 
-    //     try{
-    //            const res=await axios.post('http://localhost:8080/users/signUp',{...userInfo})
-    //            console.log(res.data)
+    const [userInfo, setUserInfo] = useState({
+        email: "",
+        password: "",
+        repassword: "",
+    });
+    const handleChange = e => {
+        setUserInfo({ ...userInfo, [e.target.id]: e.target.value });
+    };
 
-    //     }catch(err){console.log(err)}
-    // }
+const addUser = async () => {
+        try {
+            const res = await axios.post(
+                "http://localhost:8080/users/signup",
+                userInfo
+            );
+            if (res.data.ok) {
+                alert("Signup successful! Please log in.");
+            }
+        } catch (err) {
+            console.log(err);
+            alert(
+                `Sorry, there was a problem signing you up. ${err.response.data}`
+            );
+        }
+    };
 
-  return (
-    <>
-    <form className='d-flex flex-column'>
-        <input className='rounded-pill border border none my-2 p-1' id="nickName" placeholder='Name' onChange={handleChange} value={userInfo.nickName}/>
-        <input  className='rounded-pill border border none p-1' id="email" placeholder='Email' onChange={handleChange} value={userInfo.email}/>
-        <input className='rounded-pill border border none my-2 p-1' id="password" placeholder='Password' onChange={handleChange} value={userInfo.password}/>
-        <span className='align-self-center'>Confirm Password</span>
-        <input className='rounded-pill border border none my-2 p-1' id="repassword" placeholder='Password' onChange={handleChange} value={userInfo.repassword}/>
-    </form>
-    </>
-  )
-}
+    return (
+        <>
+            <form className="d-flex flex-column">
+                <input
+                    className="rounded-pill border border none p-1"
+                    id="email"
+                    placeholder="Email"
+                    type="email"
+                    onChange={handleChange}
+                    value={userInfo.email}
+                />
+                <input
+                    className="rounded-pill border border none my-2 p-1"
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    onChange={handleChange}
+                    value={userInfo.password}
+                />
+                <span className="align-self-center">Confirm Password</span>
+                <input
+                    className="rounded-pill border border none my-2 p-1"
+                    id="repassword"
+                    type="password"
+                    placeholder="Password"
+                    onChange={handleChange}
+                    value={userInfo.repassword}
+                />
+                <AuthButton text="Sign Up" handleClick={addUser} />
+            </form>
+        </>
+    );
+};
 
-export default SignUp
+export default SignUp;
