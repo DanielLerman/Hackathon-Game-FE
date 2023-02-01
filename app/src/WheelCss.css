@@ -22,7 +22,44 @@
        cursor: pointer;
        box-shadow: 0 0 20px #eeeeee, 0 0 5px #fff94d, 0 0 10px #fff94d, 0 0 10px #ff4da6,
        0 0 40px #ff4da6, 0 0 20px #fff94d, 0 0 80px #fff94d; 
-   
-   
+   }
+   .task-box{
+    padding: 1rem;
+    width: 100%;
+    margin-top: 2rem;
+    background-color: 	#FC80A5;
+    box-shadow: 0 0 20px #eeeeee, 0 0 5px 	#FF6EFF, 0 0 5px #eeeeee, 0 0 0px #ff4da6,
+       0 0 10px #FC80A5, 0 0 5px 	#eeeeee, 0 0 50px #eeeeee inset; 
+       position: relative;
+       top:-6rem
+   }
+   .task{
+    font-family: 'Fredoka One', cursive;
+  color: #C32148;
+
+   }
+   .shots-btn, .points-btn{
+     font-family: 'Fredoka One', cursive;
+    background-color: 	#4BC7CF;
+    padding:0.3rem 0.8rem;
+    color:#1a7178;
+  
+
+   }
+   .shots-btn{
+    background-color: #FF404C;
+    color:#a00f0f ;
+    padding:0.3rem 1rem;
+   }
+   .shots-btn:hover{
+    cursor: pointer;
+       box-shadow: 0 0 20px #eeeeee, 0 0 5px #D92121, 0 0 5px #a00f0f, 0 0 0px #ff4da6,
+       0 0 0px #D92121, 0 0 0px #a00f0f, 0 0 5px #D92121;
+   }
+   .points-btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0 20px #eeeeee, 0 0 5px #0048BA, 0 0 5px #1a7178, 0 0 0px #ff4da6,
+    0 0 0px #0048BA, 0 0 0px #fff94d, 0 0 5px #1a7178;
+
    }
 
