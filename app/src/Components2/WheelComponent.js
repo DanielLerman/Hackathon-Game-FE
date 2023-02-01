@@ -235,4 +235,5 @@ const WheelComponent = ({
     </div>
   );
 };
+
 export default WheelComponent;
