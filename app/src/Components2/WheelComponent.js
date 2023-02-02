@@ -121,6 +121,7 @@ const WheelComponent = ({
       timerHandle = 0;
       angleDelta = 0;
     }
+    
   };
 
   const wheelDraw = () => {
