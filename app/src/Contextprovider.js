@@ -9,12 +9,12 @@ export function useGameContext() {
 function GameContextprovider({ children }) {
   const [user, setUser]=useState({nickName:'',email:'',password:''});
   const [userInfo, setUserInfo]=useState({nickName:'',email:'',password:'',repassword:''});
-
-   
+  const [playersTurn, setPlayersTurn]=useState([])
 
   const valueToShere={
     setUserInfo,
-    userInfo
+    userInfo,
+    playersTurn, setPlayersTurn
 
    
   }

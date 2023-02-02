@@ -9,6 +9,27 @@
    
    
    }
+   .players-box{
+    position: relative;
+    /* top:2rem;
+    left: -20rem; */
+  
+   width: 20%;
+   margin-left: 1%;
+   /* margin-right: 10%; */
+    margin-top: 2rem;
+    background-color: 	#FC80A5;
+    box-shadow: 0 0 20px #eeeeee, 0 0 5px 	#FF6EFF, 0 0 5px #eeeeee, 0 0 0px #ff4da6,
+       0 0 10px #FC80A5, 0 0 5px 	#eeeeee, 0 0 50px #eeeeee inset;
+
+    align-self: flex-start;
+    color: #a00f0f;
+   }
+   .player{
+    padding:0.3rem 0.8rem;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 0.1rem;
+   }
    .background{
        height: 100vh;
        width: 100vw;

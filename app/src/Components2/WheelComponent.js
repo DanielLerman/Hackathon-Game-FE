@@ -1,6 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
+import { GameContext } from "../Contextprovider";
+
 
 const WheelComponent = ({
+
   segments,
   segColors,
   winningSegment,
@@ -22,6 +25,8 @@ const WheelComponent = ({
   let currentSegment = "";
   let isStarted = false;
   const [isFinished, setFinished] = useState(false);
+ 
+
   let timerHandle = 0;
   const timerDelay = segments.length;
   let angleCurrent = 0;
@@ -60,8 +65,10 @@ const WheelComponent = ({
 
   const spin = () => {
     isStarted = true;
+   
     // onRotate();
     if (timerHandle === 0) {
+      // yourTurn()
       spinStart = new Date().getTime();
       // maxSpeed = Math.PI / ((segments.length*2) + Math.random())
       maxSpeed = Math.PI / segments.length;

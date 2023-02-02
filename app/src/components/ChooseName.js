@@ -4,15 +4,19 @@ import '../ChooseName.css'
 
 const Username = ({ socket }) => {
   const navigate = useNavigate();
-  const [userName, setUserName] = useState('');
+  const [player, setPlayer] = useState({username:"", score:""});
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    localStorage.setItem('userName', userName);
-    socket.emit('newUser', {userName, socketID: socket.id });
+    localStorage.setItem('userName', player);
+    socket.emit('newUser', {player, socketID: socket.id });
+    
     navigate(`/Games`);
   };
+  const handleChange = e => {
+    setPlayer({ ...player, [e.target.id]: e.target.value });
+};
 
 
 
@@ -29,8 +33,8 @@ const Username = ({ socket }) => {
         name="username"
         id="username"
         className="username__input rounded-pill border border-danger border-3 p-1 "
-        value={userName}
-        onChange={(e) => setUserName(e.target.value)}
+        value={player.username}
+        onChange={handleChange}
         required
       />
       <button className="home__cta rounded-pill my-5  joinGame-btn">Join Game</button>
